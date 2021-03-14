@@ -49,13 +49,10 @@ npm install -g gap2gpx
 ## Sample usage
 
 ```sh
-# Process file GC12345.gpx and save output to GC12345.out.gpx:
+# Process file some-run.json and save output to some-run.gpx:
 gap2gpx -i some-run.json
 
-# Process file GC12345.gpx, strip html from description to plaintext and save output to output.gpx:
-gap2gpx -i some-run.json -o output.gpx -h
-
-# Process file GC12345.gpx and output to stdout:
+# Process file some-run.json and output to stdout:
 gap2gpx -i some-run.json -s
 ```
 

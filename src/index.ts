@@ -1,6 +1,6 @@
 import yargs from 'yargs';
 import chalk from 'chalk';
-import * as I from './interfaces';
+import * as I from './interfaces/common';
 import { Process } from './Process';
 
 const options = yargs
@@ -15,9 +15,9 @@ const params: I.Params = {
 
 const process = new Process(options.input as string, params, options.output as string);
 process.run().then(
-  (points: number) => {
+  () => {
     if (!options.stdout) {
-      console.log(chalk.green(`✅ Done. ${points} points processed.`));
+      console.log(chalk.green(`✅ Done.`));
     }
   },
   () => {

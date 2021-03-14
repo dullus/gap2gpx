@@ -15,9 +15,9 @@ const params = {
     stdout: options.stdout
 };
 const process = new Process_1.Process(options.input, params, options.output);
-process.run().then((points) => {
+process.run().then(() => {
     if (!options.stdout) {
-        console.log(chalk_1.default.green(`✅ Done. ${points} points processed.`));
+        console.log(chalk_1.default.green(`✅ Done.`));
     }
 }, () => {
     return;
